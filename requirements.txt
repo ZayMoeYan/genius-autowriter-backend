@@ -6,7 +6,7 @@ pydantic-settings
 python-dotenv
 python-dateutil
 google-genai
-
+email-validator
 SQLAlchemy
 psycopg2-binary
 psycopg2-binary
