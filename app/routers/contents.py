@@ -77,7 +77,7 @@ def update_one(
 
 from fastapi import status
 
-@router.delete("/{content_id}", status_code=status.HTTP_204_NO_CONTENT)
+@router.delete("/{content_id}", status_code=status.HTTP_200_OK)
 def delete_one(
     content_id: int,
     db: Session = Depends(get_db),
