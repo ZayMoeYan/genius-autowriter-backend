@@ -9,8 +9,8 @@ google-genai
 email-validator
 SQLAlchemy
 psycopg2-binary
-psycopg2-binary
 
+python-multipart
 python-jose[cryptography]
 passlib[bcrypt]<4.1
 alembic
