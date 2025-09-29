@@ -11,6 +11,7 @@ alembic==1.13.2
 
 # --- Pydantic (Data Validation) ---
 pydantic==2.9.2
+email-validator
 pydantic-settings==2.6.1   # for managing settings via .env
 
 # --- CORS (if you expose APIs to frontend) ---
