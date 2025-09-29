@@ -5,10 +5,9 @@ import os
 
 app = FastAPI(title="Content Generator API")
 
-if os.getenv("RUN_CREATE_ALL", "false").lower() == "true":
-    @app.on_event("startup")
-    def on_startup():
-        database.Base.metadata.create_all(bind=database.engine)
+@app.on_event("startup")
+def on_startup():
+    database.Base.metadata.create_all(bind=database.engine)
 
 app.include_router(auth.router)
 app.include_router(admin.router)
