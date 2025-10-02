@@ -39,4 +39,4 @@ def delete_user(user_id: int, db: Session = Depends(get_db), current_user: model
     if not db_user:
         raise HTTPException(status_code=404, detail="User not found")
     crud.delete_user(db, db_user)
-    return {"message": "User deleted"}
+    return {"message": "User deleted", "username": db_user.username, "role": db_user.role}
