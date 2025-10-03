@@ -62,7 +62,9 @@ class UserOut(UserBase):
 class Token(BaseModel):
     access_token: str
     token_type: str
-    user_id: int
+    username: str
+    role: str
+    email: str
 
 class TokenPayload(BaseModel):
     sub: Optional[str] = None
