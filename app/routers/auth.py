@@ -24,6 +24,5 @@ def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(), db:
     if user.status == "deactivate":
         raise HTTPException(status_code=403, detail="User account is deactivated")
 
-    return {"access_token": access_token, "token_type": "Bearer", 
-            "username": user.username, "role": user.role.value, "email": user.email}
+    return {"access_token": access_token, "token_type": "Bearer", "user_id": user.id}
 
